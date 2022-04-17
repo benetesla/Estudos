@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object Model</title>
+    <script>
+        function Distribuircarcter(params) {
+            //selecione um valor digitado
+            var caracter = document.getElementById('entrada').value
+                //limpando o campo de digitacao
+            caracter = document.getElementById('entrada').value = ''
+
+
+            //limpar os espaços em branco
+            caracter.trim()
+            switch (caracter) {
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+
+                    //adicionar o caracter no campo referente a numeros
+                    document.getElementById('Numeros').value += caracter
+                    break;
+
+                default:
+                    //adicionar o caracter no campo referente a  letras
+                    document.getElementById('Letras').value = caracter
+
+                    break;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <input id="entrada" type="text" placeholder="Digite um caracter aqui" onkeyup="Distribuircarcter()">
+    <hr>
+    <span>Letras</span>
+    <input id="Letras" type="text" disabled="disabled">
+    <span>Numeros</span>
+    <input id="Numeros" type="text" disabled="disabled">
+</body>
+
+</html>

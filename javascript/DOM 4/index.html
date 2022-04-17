@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model4</title>
+    <script>
+        function modificarestilo(CorDeFundo, l, a) {
+            document.getElementById('quadra').style.background = CorDeFundo
+            document.getElementById('quadra').style.width = l
+            document.getElementById('quadra').style.height = a
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Manipulando estilo</h3>
+    <button type="button" onclick="modificarestilo('#FF0000', '200px')">RED</button>
+    <button type="button" onclick="modificarestilo('#00FF00', '150px')">GREEN</button>
+    <button type="button" onclick="modificarestilo('#0000FF', '120px', '180px')">BLUE</button>
+    <hr>
+    <div style="border:groove 8px #ccc; width:100px; height:100px" id="quadra"></div>
+</body>
+
+</html>
